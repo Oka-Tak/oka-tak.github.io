@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ポートフォリオ | 大川貴久</title>
+  <meta name="description" content="大川貴久のポートフォリオ。">
+  
+  <style>
+    :root {
+      --bg:#fff; --fg:#1a1a1a; --mute:#666; --link:#0b63f6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {--bg:#0b0d10; --fg:#e9eef3; --mute:#9aa4af; --link:#7ab3ff;}
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+      background:var(--bg); color:var(--fg);
+      display:flex; justify-content:center;
+    }
+    .wrap{width:min(920px,92vw); padding:6vh 0 10vh;}
+    header{margin-bottom:2rem;}
+    h1{font-size:clamp(1.6rem,4vw,2rem); margin:.2rem 0;}
+    .tagline{color:var(--mute); margin:0 0 .5rem;}
+    nav{display:flex; gap:1rem; flex-wrap:wrap}
+    nav a{color:var(--link); text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    section{margin:2.2rem 0}
+    .muted{color:var(--mute); font-size:.95rem}
+    footer{margin-top:3rem; font-size:.9rem; color:var(--mute)}
+    ul{padding-left:1.1rem; margin:.6rem 0}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="tagline">ポートフォリオ</p>
+      <h1>大川 貴久 (Takahisa Okawa)</h1>
+      <p class="muted">静岡大学 情報学部 行動情報学科 学部1年</p>
+      <nav>
+        <a href="#about">自己紹介</a>
+        <a href="#experience">経験</a>
+        <a href="#links">リンク</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>自己紹介</h2>
+      <ul>
+        <li>主な技術: Linux, Python, Go</li>
+        <li>関心領域: OSS、Linux</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>経験</h2>
+      <ul>
+        <li>
+          <strong>行政改革学生アイデアソン・ハッカソン</strong><br>
+          <small>ファイナリスト, 2025年8月 | 55.6% (5/9) | 内閣府主催</small>
+        </li>
+        <li>
+          <strong>セキュリティキャンプ・ミニ 2025（愛知開催）</strong><br>
+          <small>2025年9月</small>
+        </li>
+      </ul>
+    </section>
+    
+    <section id="links">
+      <h2>リンク</h2>
+      <ul>
+        <li><a href="https://github.com/oka-tak" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/penguin_bash" target="_blank" rel="noopener">X (Twitter)</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 大川貴久</p>
+    </footer>
+  </main>
+</body>
+</html>
