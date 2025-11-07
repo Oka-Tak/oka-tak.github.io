@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大学祭レジ割引ツール</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <h1>大学祭セット割計算</h1>
+        <p>注文数を入力するだけで、小計と割引・最終金額を即座に確認できます。</p>
+      </div>
+      <div class="badge">オフライン対応</div>
+    </header>
+
+    <main>
+      <section class="order-panel">
+        <h2>商品一覧 &amp; 注文入力</h2>
+        <p class="hint">
+          下記の表で数量を直接入力してください。<br />
+          割引は <strong>飲み物入り3品 → 食品3品 → 任意2品</strong> の優先順で自動適用されます。
+        </p>
+        <form id="order-form">
+          <div class="table-wrapper">
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th>商品名</th>
+                  <th>カテゴリ</th>
+                  <th>税込価格</th>
+                  <th style="width: 150px">数量</th>
+                </tr>
+              </thead>
+              <tbody id="product-rows">
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">豚まん</span>
+                      <span class="product-id"><code>butaman</code></span>
+                    </div>
+                  </td>
+                  <td>食品</td>
+                  <td>250円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="butaman">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="butaman" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="butaman">+</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">鹿まん</span>
+                      <span class="product-id"><code>shikaman</code></span>
+                    </div>
+                  </td>
+                  <td>食品</td>
+                  <td>350円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="shikaman">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="shikaman" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="shikaman">+</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">小籠包</span>
+                      <span class="product-id"><code>shoronpo</code></span>
+                    </div>
+                  </td>
+                  <td>食品</td>
+                  <td>250円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="shoronpo">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="shoronpo" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="shoronpo">+</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">シークワーサー</span>
+                      <span class="product-id"><code>shikuwasa</code></span>
+                    </div>
+                  </td>
+                  <td>ドリンク</td>
+                  <td>200円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="shikuwasa">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="shikuwasa" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="shikuwasa">+</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">サトウキビジュース</span>
+                      <span class="product-id"><code>sugarcane</code></span>
+                    </div>
+                  </td>
+                  <td>ドリンク</td>
+                  <td>350円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="sugarcane">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="sugarcane" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="sugarcane">+</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="product-name">
+                      <span class="product-label">王老吉</span>
+                      <span class="product-id"><code>wonglok</code></span>
+                    </div>
+                  </td>
+                  <td>ドリンク</td>
+                  <td>400円</td>
+                  <td>
+                    <div class="quantity-control">
+                      <button type="button" class="quantity-btn" data-adjust="-1" data-product-id="wonglok">-</button>
+                      <input type="number" class="quantity-input" min="0" step="1" value="0" data-product-id="wonglok" />
+                      <button type="button" class="quantity-btn" data-adjust="1" data-product-id="wonglok">+</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="primary">計算する</button>
+            <button type="reset" class="ghost" id="reset-btn">クリア</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="result-panel">
+        <h2>計算結果</h2>
+        <div class="totals">
+          <div>
+            <span class="label">小計</span>
+            <span class="value" id="subtotal">0円</span>
+          </div>
+          <div>
+            <span class="label">割引</span>
+            <span class="value discount" id="discount">-0円</span>
+          </div>
+          <div class="final">
+            <span class="label">支払金額</span>
+            <span class="value" id="final">0円</span>
+          </div>
+        </div>
+        <div class="applied-sets">
+          <h3>適用されたセット</h3>
+          <ul id="applied-sets">
+            <li class="empty">まだ計算が行われていません。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="history-panel">
+        <h2>会計履歴</h2>
+        <p class="hint">
+          最新の計算結果を最大50件まで保存します。CSVとしてダウンロードして整合性チェックに利用できます。
+        </p>
+        <div class="history-actions">
+          <button type="button" class="ghost" id="export-history">CSVダウンロード</button>
+          <button type="button" class="ghost danger" id="clear-history">履歴を削除</button>
+        </div>
+        <ol id="history-list">
+          <li class="empty">まだ履歴がありません。</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 Festival Cashier Helper</small>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
