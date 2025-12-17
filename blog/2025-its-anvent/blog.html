@@ -118,10 +118,15 @@
       <h1 class="blog-title">ミニPCがサーバーになれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）</h1>
       <p class="blog-meta">2025年12月18日 公開</p>
       <h2>はじめに</h2>
-      <p>皆さんは『ミニPC』というものをご存知でしょうか。近年話題になっている小型のデスクトップPCです。CPUやメモリに、ノートパソコン用のものを採用することで、価格に対して高性能、省スペース・省電力を実現しています。<br>
+      <p>
+        <span style="display:block;font-weight:bold;font-size:1.1em;background:linear-gradient(90deg,#e53935 0%,#43a047 100%);color:#fff;padding:0.5em 0.8em;border-radius:6px;margin-bottom:1.2em;text-align:center;">
+          この記事は，某室アドベントカレンダー16日目分となります
+        </span>
+        皆さんは『ミニPC』というものをご存知でしょうか。近年話題になっている小型のデスクトップPCです。CPUやメモリに、ノートパソコン用のものを採用することで、価格に対して高性能、省スペース・省電力を実現しています。<br>
         そんなミニPCの人気の火付け役ともなったCPUがあります。それが<strong>intel N100</strong>です。省電力のPコアのみで構成され、前世代のCeleron
-        N5100から1.6倍もの性能アップにより「価格の割に使える」CPUとして多くのミニPCに採用され、人気に寄与しました。かく言う私も、その評判を聞き、試してみたいと思い、Amazonにて購入していました。ですが、具体的な使い道のないまま購入したため、そのまま放置していました。<br>今回、某室アドベントカレンダーに書く内容を考えていた際、このミニPCの存在と、夏にOSC
+        N5100から1.6倍もの性能アップにより「価格の割に使える」CPUとして多くのミニPCに採用され、人気に寄与しました。かく言う私も、その評判を聞き、試してみたいと思い、Amazonにて購入していました。ですが、具体的な使い道のないまま購入したため、そのまま放置していました。<br>今回、 <a href="https://adventar.org/calendars/11899" target="_blank" rel="noopener">某室アドベントカレンダー</a>に書く内容を考えていた際、このミニPCの存在と、夏にOSC
         Kyotoでのボランティアでいただいた、Proxmoxの本のことを思い出し、一念発起し、「N100で自分の欲しいサーバーを作ってみる」ことにしました。<br><s>初心者なので、駄文になることをお許しください...</s>
+      </p>
       <figure style="text-align:center;">
         <img src="image0.png" alt="OSC KyotoでいただいたProxmoxの本" style="max-width:640px;width:98vw;display:inline-block;">
         <div style="font-size:.92em;color:#888;margin-top:.3em;">OSC KyotoでいただいたProxmoxの本</div>
@@ -173,7 +178,7 @@
       </ul>
       <h2>機能の紹介</h2>
       <h3>TailScale</h3>
-      <p>TailWireGuardをベースにしたVPNサービス。今回は、Proxmox VEサーバーに導入することで、外出先から自宅サーバーに安全にアクセスできるようにしました。</p>
+      <p>WireGuardをベースにしたVPNサービス。今回は、Proxmox VEサーバーに導入することで、外出先から自宅サーバーに安全にアクセスできるようにしました。</p>
       <figure class="phone-img">
         <img src="image3.png" alt="TailScale経由でスマホからでも確認できる" style="max-width:180px;width:60vw;display:inline-block;">
         <div style="font-size:.88em;color:#888;margin-top:.3em;">TailScale経由でスマホからでも確認できる</div>
