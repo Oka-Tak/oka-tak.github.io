@@ -1,115 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ミニPCがサーバーになれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）
   </title>
-
-  <style>
-    .blog-wrap {
-      width: min(920px, 92vw);
-      margin: 0 auto;
-      padding: 6vh 0 10vh;
-    }
-
-    .blog-title {
-      font-size: clamp(1.6rem, 4vw, 2rem);
-      margin: .2rem 0;
-    }
-
-    .blog-meta {
-      color: #888;
-      margin-bottom: 2rem;
-    }
-
-    .blog-content img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1.5rem auto;
-      box-shadow: 0 2px 8px #0002;
-      border-radius: 8px;
-    }
-
-    .blog-content h1,
-    .blog-content h2,
-    .blog-content h3 {
-      margin-top: 2.2rem;
-    }
-
-    .blog-content {
-      line-height: 1.8;
-      font-size: 1.08em;
-    }
-
-    .blog-content ul {
-      padding-left: 1.2em;
-    }
-
-    .blog-content code {
-      background: #f4f4f4;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-
-    .blog-content blockquote {
-      border-left: 4px solid #ccc;
-      padding-left: 1em;
-      color: #666;
-      margin: 1em 0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .blog-content code {
-        background: #222;
-      }
-    }
-
-    .blog-nav {
-      margin-bottom: 2.5rem;
-    }
-
-    .blog-nav a {
-      color: var(--link, #0b63f6);
-      text-decoration: none;
-      margin-right: 1.5em;
-    }
-
-    .blog-nav a:hover {
-      text-decoration: underline;
-    }
-
-    .blog-content figure {
-      margin: 1.5rem auto;
-      text-align: center;
-    }
-
-    .blog-content figcaption {
-      font-size: .92em;
-      color: #888;
-      margin-top: .3em;
-    }
-
-    .blog-content .phone-img img {
-      max-width: 220px;
-      width: 60vw;
-      display: inline-block;
-    }
-
-    .zoomable {
-      transition: transform 0.2s;
-    }
-
-    .zoomable:hover {
-      transform: scale(1.05);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
   <div class="blog-wrap">
     <nav class="blog-nav">
       <a href="../../index.html">← ポートフォリオTOP</a>
@@ -226,7 +124,6 @@
         <div style="font-size:.92em;color:#888;margin-top:.3em;">Navidromeの音楽再生画面。ハイレゾも再生可能</div>
       </figure>
       <figure class="phone-img">
-
         <img src="image9.png" alt="スマホから再生．『まりあ†ほりっく』はアニメも曲も良き．"
           style="max-width:320px;width:80vw;display:inline-block;">
         <div style="font-size:.92em;color:#888;margin-top:.3em;">スマホから再生．『まりあ†ほりっく』はアニメも曲も良き．</div>
@@ -236,9 +133,7 @@
         当初の想定では、もう少し多くのサービスを導入する予定でしたが、設定に思いのほか苦戦しました。Linuxって難しいですね。<br>
         今回構築したサーバーは、あくまで私個人の趣味・実験用のサーバーですが、Proxmoxを利用することで、様々なサービスを手軽に試すことができました。<br>
         皆さんも、ぜひ冬休みにでも，自分だけのサーバー環境を構築してみてはいかがでしょうか。</p>
-
     </article>
   </div>
 </body>
-
 </html>
