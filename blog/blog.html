@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | 大川貴久</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --link: #0b63f6;
+      --card: #f7f7f7;
+      --border: #e5e5e5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0d10;
+        --fg: #e9eef3;
+        --muted: #9aa4af;
+        --link: #7ab3ff;
+        --card: #14181d;
+        --border: #2a3138;
+      }
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: min(920px, 92vw);
+      padding: 6vh 0 10vh;
+    }
+
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .back:hover,
+    .entry a:hover {
+      text-decoration: underline;
+    }
+
+    .entries {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .entry {
+      padding: 1.2rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .entry a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .entry small {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../index.html">← ポートフォリオTOP</a>
+    <h1>Blog</h1>
+    <p class="muted">公開したエントリー一覧です。</p>
+
+    <ul class="entries">
+      <li class="entry">
+        <a href="./2025-its-advent/index.html">ミニPCがサーバーになれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）</a>
+        <small>2025年12月18日</small>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
